@@ -9,5 +9,13 @@ class Welcome extends Controller {
 	public function home() {
 		$this->call->view('Nhome');
 	}
+
+	public function contact() {
+		$this->call->view('contact');
+	}
+
+	public function signin() {
+		$this->call->view('signin');
+	}
 }
 ?>

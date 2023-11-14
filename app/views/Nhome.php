@@ -41,7 +41,7 @@
           <a class="nav-link" href="/Contact">Contact</a>
           </li>
           <li class="nav-item">
-            <router-link to="/Login" class="nav-link">Sign In</>
+          <a class="nav-link" href="/sign">Sign In</a>
           </li>
         </ul>
       </div>
