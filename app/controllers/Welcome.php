@@ -5,5 +5,9 @@ class Welcome extends Controller {
 	public function index() {
 		$this->call->view('Nhome');
 	}
+	
+	public function home() {
+		$this->call->view('Nhome');
+	}
 }
 ?>

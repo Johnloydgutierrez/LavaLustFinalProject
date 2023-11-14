@@ -35,13 +35,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <router-link to="/" class="nav-link">Home</router-link>
+          <a class="nav-link" href="/home">Home</a>
           </li>
           <li class="nav-item">
-            <router-link to="/Contact" class="nav-link">Contact</router-link>
+          <a class="nav-link" href="/Contact">Contact</a>
           </li>
           <li class="nav-item">
-            <router-link to="/Login" class="nav-link">Sign In</router-link>
+            <router-link to="/Login" class="nav-link">Sign In</>
           </li>
         </ul>
       </div>
