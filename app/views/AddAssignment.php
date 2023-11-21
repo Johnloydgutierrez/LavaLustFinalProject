@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* General styles */
-        *{
-            font-family:Ariel;
+        * {
+            font-family: Arial, sans-serif;
         }
+
         body {
-            font-family: sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -19,7 +19,7 @@
             display: flex;
             width: 100%;
             height: 100vh;
-            text-align:center;
+            text-align: center;
         }
 
         /* Left panel styles for insertion form */
@@ -35,9 +35,10 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        h1,label{
-            font-family:Ariel;
-            text-align:center;
+
+        h1,
+        label {
+            text-align: center;
         }
 
         /* Header styles */
@@ -68,6 +69,8 @@
             padding: 20px;
             border: 1px solid #ccc;
             margin-bottom: 16px;
+            background-color: #28a745; /* Green color */
+            color: #fff; /* White text color for better contrast */
         }
 
         .insert-form label {
@@ -93,13 +96,13 @@
         .task-table {
             width: 95%;
             border-collapse: collapse;
-            border: 1px solid #ccc;
+            border: 2px solid #28a745; /* Green border */
         }
 
         .task-table th,
         .task-table td {
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #28a745; /* Green border */
             text-align: center;
         }
 
@@ -115,11 +118,11 @@
 </head>
 
 <body>
-    
+
     <div class="container">
-    
+
         <div class="left-panel">
-            
+
             <br>
 
             <div class="insert-form">
@@ -147,33 +150,34 @@
             </div>
         </div>
 
-        <table class="task-table">
-            <tr>
-                <th>Employee</th>
-                <th>Description</th>
-                <th>Location</th>
-                <th>Contact Number</th>
-                <th>Customer Name</th>
-                <th>Action</th>
-            </tr>
-
-            <?php
-                $sql = "SELECT * FROM tasks";
-                $result = $this->db->query($sql);
-
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['staff'] . "</td>";
-                    echo "<td>" . $row['description'] . "</td>";
-                    echo "<td>" . $row['location'] . "</td>";
-                    echo "<td>" . $row['contact'] . "</td>";
-                    echo "<td>" . $row['costumer'] . "</td>";
-
-                    echo "<td><a href='deleteRecord.php?id=" . $row['id'] . "'>Task Complete</a></td>";
-                    echo "</tr>";
-                }
-            ?>
-        </table>
+        <div class="right-panel">
+            <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-left-square-fill" viewBox="0 0 20 19">
+                    <path
+                        d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+                </svg>
+            </a>
+            <table class="task-table">
+                <tr>
+                    <th>Employee</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Contact Number</th>
+                    <th>Customer Name</th>
+                  
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Task Description 1</td>
+                    <td>Office</td>
+                    <td>123-456-7890</td>
+                    <td>ABC Company</td>
+                   
+                </tr>
+                <!-- Add more table rows as needed -->
+            </table>
+        </div>
     </div>
 </body>
 
