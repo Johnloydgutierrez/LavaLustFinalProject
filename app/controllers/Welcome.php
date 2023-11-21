@@ -20,5 +20,17 @@ class Welcome extends Controller {
 	public function AddAssignment() {
 		$this->call->view('AddAssignment');
 	}
+
+	public function insert() {
+		$bind = array(
+			'employee' => $employee,
+			'description' => $description,
+			'location' => $location,
+			'contact' => $contact,
+			'customer' => $customer,
+			);
+		
+		$this->db->table('addasign')->insert($bind);
+	}
 }
 ?>
