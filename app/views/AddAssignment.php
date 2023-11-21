@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* General styles */
-        *{
-            font-family:Ariel;
+        * {
+            font-family: Arial, sans-serif;
         }
+
         body {
-            font-family: sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -19,7 +19,7 @@
             display: flex;
             width: 100%;
             height: 100vh;
-            text-align:center;
+            text-align: center;
         }
 
         /* Left panel styles for insertion form */
@@ -35,9 +35,10 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        h1,label{
-            font-family:Ariel;
-            text-align:center;
+
+        h1,
+        label {
+            text-align: center;
         }
 
         /* Header styles */
@@ -68,6 +69,8 @@
             padding: 20px;
             border: 1px solid #ccc;
             margin-bottom: 16px;
+            background-color: #28a745; /* Green color */
+            color: #fff; /* White text color for better contrast */
         }
 
         .insert-form label {
@@ -93,13 +96,13 @@
         .task-table {
             width: 95%;
             border-collapse: collapse;
-            border: 1px solid #ccc;
+            border: 2px solid #28a745; /* Green border */
         }
 
         .task-table th,
         .task-table td {
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #28a745; /* Green border */
             text-align: center;
         }
 
@@ -115,11 +118,11 @@
 </head>
 
 <body>
-    
+
     <div class="container">
-    
+
         <div class="left-panel">
-            
+
             <br>
 
             <div class="insert-form">
@@ -157,6 +160,22 @@
                 <th>Action</th>
             </tr>
 
+            <?php
+                $sql = "SELECT * FROM tasks";
+                $result = $this->db->query($sql);
+
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row['staff'] . "</td>";
+                    echo "<td>" . $row['description'] . "</td>";
+                    echo "<td>" . $row['location'] . "</td>";
+                    echo "<td>" . $row['contact'] . "</td>";
+                    echo "<td>" . $row['costumer'] . "</td>";
+
+                    echo "<td><a href='deleteRecord.php?id=" . $row['id'] . "'>Task Complete</a></td>";
+                    echo "</tr>";
+                }
+            ?>
         </table>
     </div>
 </body>
