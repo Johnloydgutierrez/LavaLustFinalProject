@@ -157,22 +157,6 @@
                 <th>Action</th>
             </tr>
 
-            <?php
-                $sql = "SELECT * FROM tasks";
-                $result = $this->db->query($sql);
-
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['staff'] . "</td>";
-                    echo "<td>" . $row['description'] . "</td>";
-                    echo "<td>" . $row['location'] . "</td>";
-                    echo "<td>" . $row['contact'] . "</td>";
-                    echo "<td>" . $row['costumer'] . "</td>";
-
-                    echo "<td><a href='deleteRecord.php?id=" . $row['id'] . "'>Task Complete</a></td>";
-                    echo "</tr>";
-                }
-            ?>
         </table>
     </div>
 </body>
