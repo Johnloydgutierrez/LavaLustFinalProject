@@ -49,4 +49,4 @@ $router->get('/Nhome', 'Welcome::Nhome');
 $router->get('/home', 'Welcome::home');
 $router->get('/contact', 'Welcome::contact');
 $router->get('/signin', 'Welcome::signin');
-
+$router->get('/AddAssignment', 'Welcome::AddAssignment');

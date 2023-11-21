@@ -9,5 +9,9 @@ class Welcome extends Controller {
 	public function home() {
 		$this->call->view('Nhome');
 	}
+	public function AddAssignment() {
+		$this->call->view('AddAssignment');
+	}
+	
 }
 ?>

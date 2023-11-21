@@ -17,5 +17,8 @@ class Welcome extends Controller {
 	public function signin() {
 		$this->call->view('signin');
 	}
+	public function AddAssignment() {
+		$this->call->view('AddAssignment');
+	}
 }
 ?>
