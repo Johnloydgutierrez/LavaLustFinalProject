@@ -113,7 +113,7 @@ class Welcome1 extends Controller {
 					if ($password === $user['password']) {
 						if ($user['is_verified']) {
 							// User is verified, proceed to the dashboard
-							$this->call->view('email_form');
+							$this->call->view('Nhome');
 
 						} else {
 							$data['email'] = $this->io->post('email');
